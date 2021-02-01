@@ -3,9 +3,55 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"
+        />
         <link rel="stylesheet" href="style.css" />
         <title>First Calculator</title>
     </head>
-    <body></body>
+    <body>
+        <div id="calculator">
+            <div id="screen-container">
+                <div id="screen"></div>
+            </div>
+            <div id="right-buttons">
+                <div><button id="number">8</button></div>
+                <div><button id="number">9</button></div>
+                <div><button id="number">7</button></div>
+                <div>
+                    <button id="op"><i class="fas fa-divide"></i></button>
+                </div>
+                <div><button id="number">4</button></div>
+                <div><button id="number">5</button></div>
+                <div><button id="number">6</button></div>
+                <div>
+                    <button id="op"><i class="fas fa-times"></i></button>
+                </div>
+                <div><button id="number">1</button></div>
+                <div><button id="number">2</button></div>
+                <div><button id="number">3</button></div>
+                <div>
+                    <button id="op"><i class="fas fa-minus"></i></button>
+                </div>
+                <div><button id="number">0</button></div>
+                <div><button id="dot">.</button></div>
+                <div>
+                    <button id="equal"><i class="fas fa-equals"></i></button>
+                </div>
+                <div>
+                    <button id="op"><i class="fas fa-plus"></i></button>
+                </div>
+                <div>
+                    <button id="DEL">DEL</button>
+                </div>
+                <div>
+                    <button id="CLR">CLR</button>
+                </div>
+            </div>
+        </div>
+    </body>
     <script src="script.js"></script>
 </html>

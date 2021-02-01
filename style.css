@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    border: 1px solid gainsboro;
+    width: 500px;
+    height: 600px;
+    display: grid;
+    grid-template-rows: 25% 75%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "screen"
+        "buttons";
+}
+
+#calculator #screen-container {
+    padding: 30px 30px 0 30px;
+    grid-area: screen;
+}
+
+#screen-container #screen {
+    height: 100%;
+    width: 100%;
+    border: 1px solid gainsboro;
+}
+
+#calculator #right-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    grid-area: buttons;
+}
+
+#right-buttons > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 25%;
+}
