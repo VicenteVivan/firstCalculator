@@ -143,6 +143,23 @@ function equals() {
         screen.innerText = savedNumber;
         savedOperation = "";
         scNotation();
+        //New number functionality
+        function deleteAndAdd() {
+            screen.innerText = this.innerText;
+            numberButtons.forEach((element) => {
+                element.removeEventListener("click", deleteAndAdd);
+            });
+        }
+        function deleteAndAddKeyboard(event) {
+            if (["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."].includes(event.key)) {
+                screen.innerText = event.key;
+                document.removeEventListener("keyup", deleteAndAddKeyboard);
+            }
+        }
+        document.addEventListener("keyup", deleteAndAddKeyboard);
+        numberButtons.forEach((element) => {
+            element.addEventListener("click", deleteAndAdd);
+        });
     }
 }
 $("equals").addEventListener("click", equals);
